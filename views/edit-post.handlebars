@@ -1,0 +1,25 @@
+
+<div class="card m-5">
+      <div class="card-header">
+            <h3 class="text-dark">Edit Post</h3>
+      </div>
+      <div class="text card-body">
+            <form class="edit-post-form">
+                  <div class="form-group">
+                        <h4>Title</h4>
+                        <input type="text" name="post-title" id="" class="form-control" value="{{post.title}}" />
+                        <br />
+                        <h4>Content</h4>
+                        <input type="text" name="post-content" id="" class="form-control" value="{{post.content}}" />
+                        <br />
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <br />
+                  </div>
+            </form>
+            <button type="button" id="delete-post" class="btn btn-danger">Delete Post</button>
+            
+      </div>
+</div>
+
+<script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>

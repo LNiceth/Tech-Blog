@@ -1,0 +1,48 @@
+
+
+<div class="card m-5">
+      <div class="card-header">
+                  <h3 class="text-dark">{{post.title}}</h3>
+            <h5 class="text-dark">Posted by {{post.user.username}} on {{formatDate post.post_date}}</h5>
+      </div>
+      <div class="text">
+            <p>
+                  {{post.content}}
+            </p>
+      </div>
+</div>
+
+<div class="card m-5">
+      <div class="card-header">
+            <h4 class="text-dark">Comments</h4>
+      </div>
+      <div class="text">
+            <ul class="list-group list-group-flush">
+                  {{#each post.comments}}
+                  <li class="list-group-item">
+                        {{comment_text}}
+                        <br /><br />
+                        - {{user.username}}, {{formatDate comment_date}}
+                  </li>
+                  {{/each}}
+            </ul>
+      </div>
+</div>
+
+<div class="card m-5">
+      <div class="card-header">
+            <h4 class="text-dark">Add A Comment</h4>
+      </div>
+      <div class="card-body">
+            <form class="comment-form">
+                  <textarea name="comment" class="form-control" id="" cols="30" rows="10"></textarea>
+                  <br>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+      </div>
+</div>
+
+<script src="/js/comment.js"></script>
+
+
+
